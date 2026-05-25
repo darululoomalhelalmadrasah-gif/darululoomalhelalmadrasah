@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darul Uloom Al-Helal Madrasah</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0F172A; /* গ্লোবাল ডার্ক ব্যাকগ্রাউন্ড */
+            color: #F8FAFC; /* সাদা টেক্সট */
+        }
+        .bg-primary { background-color: #0057B8; }
+        .bg-accent { background-color: #ED1C24; }
+        .text-primary { color: #38BDF8; } 
+        .text-accent { color: #F87171; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="shadow-md sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full" onerror="this.src='https://via.placeholder.com/50'">
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide text-white">দারুল উলূম আল-হেলাল মাদ্রাসা</h1>
+                    <p class="text-xs text-gray-400 font-medium">Darul Uloom Al-Helal Madrasah</p>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex space-x-6 font-semibold">
+                <a href="#about" class="text-gray-300 hover:text-red-400 transition">আমাদের সম্পর্কে</a>
+                <a href="#teachers" class="text-gray-300 hover:text-red-400 transition">শিক্ষকবৃন্দ</a>
+                <a href="#registration" class="text-gray-300 hover:text-red-400 transition">ভর্তি ফরম</a>
+                <a href="#result" class="text-gray-300 hover:text-red-400 transition">ফলাফল</a>
+                <a href="#contact" class="text-gray-300 hover:text-red-400 transition">যোগাযোগ</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white py-24 text-center border-b border-gray-900">
+        <div class="container mx-auto px-4 relative z-10">
+            <span class="bg-red-600 text-white text-xs uppercase px-3 py-1 rounded-full font-bold tracking-widest animate-pulse">ছুটি : ২৫মে রোজ সোমবার থেকে ৫জুন রোজ শুক্রবার পর্যন্ত</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mt-4 mb-4">ইসলামিক ও আধুনিক শিক্ষার এক অপূর্ব সমন্বয়</h2>
+            <p class="max-w-2xl mx-auto text-gray-400 text-sm md:text-base">সিলেটের কদমতলী ফেরীঘাট এলাকায় ২০২৪ সালে প্রতিষ্ঠিত একটি অনন্য দ্বীনি শিক্ষাপ্রতিষ্ঠান।</p>
+            <div class="mt-8">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYeJiPUZ0LAKjz-tcXc-jx-M5g3ElYXpogv6neyhJBY0trAQ/viewform?usp=sharing" target="_blank" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg hover:bg-red-700 transition inline-block">অনলাইনে ভর্তি হোন</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-red-950/40 py-2.5 border-b border-red-900/50">
+        <div class="container mx-auto px-4 flex items-center">
+            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded mr-3">নোটিশ:</span>
+            <marquee class="text-sm font-semibold text-red-200" scrollamount="4">
+                দারুল উলূম আল-হেলাল মাদ্রাসার ২০২৬ শিক্ষাবর্ষের নূরানী ও হিফজ বিভাগের ভর্তি কার্যক্রম চলছে। সীমিত আসনে দ্রুত যোগাযোগ করুন।
+            </marquee>
+        </div>
+    </div>
+
+    <section id="about" class="py-16 container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-white">মাদ্রাসা পরিচিতি</h3>
+            <div class="w-24 h-1 bg-red-600 mx-auto mt-2"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <p class="text-lg leading-relaxed text-gray-300">দারুল উলূম আল-হেলাল মাদ্রাসা কোমলমতি শিক্ষার্থীদের ইসলামিক মূল্যবোধ, নৈতিকতা এবং আদর্শ নাগরিক হিসেবে গড়ে তোলাই আমাদের মূল লক্ষ্য।</p>
+                <h4 class="font-bold text-xl text-sky-400">আমাদের বিভাগসমূহ:</h4>
+                <ul class="list-disc pl-5 space-y-2 font-medium text-gray-300">
+                    <li>নূরানী শিশু শ্রেণী, ১ম, ২য় ও ৩য় শ্রেণী</li>
+                    <li>আন্তর্জাতিক মানসম্পন্ন হিফজ বিভাগ</li>
+                </ul>
+            </div>
+            <div class="bg-slate-900/80 p-6 rounded-xl border-l-4 border-blue-600 shadow-lg">
+                <h4 class="font-bold text-xl text-red-400 mb-3">প্রতিষ্ঠাতা বাণী</h4>
+                <p class="italic text-sm text-gray-300">"আমরা চাই প্রতিটি সন্তান যেন দ্বীনি শিক্ষার পাশাপাশি যুগের চাহিদা অনুযায়ী সুশিক্ষিত হয়ে গড়ে ওঠে।"</p>
+                <p class="mt-4 font-bold text-sky-400">- মাওলানা আবু নছর খালেদ মিয়াজী</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers" class="py-16 bg-slate-900/40 border-t border-b border-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-white">আমাদের শিক্ষকবৃন্দ</h3>
+                <div class="w-24 h-1 bg-red-600 mx-auto mt-2"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300">
+                    <div class="w-28 h-28 mx-auto mb-4 relative">
+                        <img src="teacher1.jpg" alt="মাওলানা আবু নছর খালেদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
+                    </div>
+                    <h4 class="font-bold text-lg text-white">মাওলানা আবু নছর খালেদ</h4>
+                    <p class="text-red-400 text-sm font-medium">মুহতামিম</p>
+                    <a href="tel:+8801304463839" class="inline-block text-xs text-gray-400 mt-2 hover:text-sky-400 transition"><i class="fas fa-phone-alt text-sky-400 mr-1"></i> 01304463839</a>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300">
+                    <div class="w-28 h-28 mx-auto mb-4 relative">
+                        <img src="teacher2.jpg" alt="মাওলানা এনামুল হক" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
+                    </div>
+                    <h4 class="font-bold text-lg text-white">মাওলানা এনামুল হক</h4>
+                    <p class="text-red-400 text-sm font-medium">সহকারী শিক্ষক</p>
+                    <a href="tel:+8801758777092" class="inline-block text-xs text-gray-400 mt-2 hover:text-sky-400 transition"><i class="fas fa-phone-alt text-sky-400 mr-1"></i> 01758777092</a>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300">
+                    <div class="w-28 h-28 mx-auto mb-4 relative">
+                        <img src="teacher3.jpg" alt="মাওলানা মাসুদ আহমদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
+                    </div>
+                    <h4 class="font-bold text-lg text-white">মাওলানা মাসুদ আহমদ</h4>
+                    <p class="text-red-400 text-sm font-medium">সহকারী শিক্ষক</p>
+                    <p class="text-xs text-gray-400 mt-2"><i class="fas fa-phone-alt text-gray-500 mr-1"></i> অফিসিয়াল নাম্বার</p>
+                </div>
+                <div class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300">
+                    <div class="w-28 h-28 mx-auto mb-4 relative">
+                        <img src="teacher4.jpg" alt="হা. হাফিজুর রহমান" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
+                    </div>
+                    <h4 class="font-bold text-lg text-white">হা. হাফিজুর রহমান</h4>
+                    <p class="text-red-400 text-sm font-medium">সহকারী শিক্ষক</p>
+                    <p class="text-xs text-gray-400 mt-2"><i class="fas fa-phone-alt text-gray-500 mr-1"></i> অফিসিয়াল নাম্বার</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration" class="py-16 container mx-auto px-4 max-w-2xl text-center">
+        <div class="bg-slate-900 p-8 rounded-2xl shadow-2xl border border-gray-800">
+            <div class="mb-6">
+                <i class="fas fa-file-alt text-5xl text-sky-400 mb-3"></i>
+                <h3 class="text-2xl font-bold text-white">অনলাইন ভর্তি নিবন্ধন</h3>
+                <p class="text-sm text-gray-400 mt-1">নিচের বাটনে ক্লিক করে সঠিক তথ্য দিয়ে গুগল ফরমে ভর্তি আবেদনটি পূরণ করুন।</p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYeJiPUZ0LAKjz-tcXc-jx-M5g3ElYXpogv6neyhJBY0trAQ/viewform?usp=sharing" target="_blank" class="w-full block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition shadow-md text-lg">
+                <i class="fas fa-external-link-alt mr-2"></i>ভর্তি ফরম পূরণ করুন (Admission Form)
+            </a>
+        </div>
+    </section>
+
+    <section id="result" class="py-16 bg-slate-900/60 container mx-auto px-4 max-w-2xl rounded-2xl my-8 border border-gray-800">
+        <div class="text-center mb-6">
+            <i class="fas fa-graduation-cap text-5xl text-red-500 mb-3"></i>
+            <h3 class="text-2xl font-bold text-white">ফলাফল অনুসন্ধান কেন্দ্র</h3>
+            <p class="text-sm text-gray-400 mt-1">গুগল শিট ডাটাবেজ থেকে লাইভ ফলাফল চেক করুন</p>
+        </div>
+        
+        <div class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-1">রোল নাম্বার (Roll No)</label>
+                <input type="text" id="searchRoll" placeholder="উদা: 100" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-red-500 transition">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-1">পরীক্ষার নাম (Exam Type)</label>
+                <select id="searchExam" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-red-500 transition">
+                    <option value="প্রথম সাময়িক পরিক্ষা">প্রথম সাময়িক পরিক্ষা</option>
+                    <option value="দ্বিতীয় সাময়িক পরিক্ষা">দ্বিতীয় সাময়িক পরিক্ষা</option>
+                    <option value="বার্ষিক পরীক্ষা">বার্ষিক পরীক্ষা</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-1">সাল (Year)</label>
+                <select id="searchYear" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-red-500 transition">
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026" selected>2026</option>
+                    <option value="2027">2027</option>
+                </select>
+            </div>
+            <button onclick="searchOnlineResult()" id="searchBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition shadow-md flex items-center justify-center cursor-pointer">
+                <i class="fas fa-search mr-2"></i> ফলাফল দেখুন (Search Result)
+            </button>
+        </div>
+
+        <div id="resultCard" class="hidden mt-8 bg-slate-900 p-5 rounded-xl border border-gray-700">
+            <div class="border-b border-gray-700 pb-3 mb-4">
+                <h4 class="text-lg font-bold text-sky-400" id="resName">নাম: </h4>
+                <p class="text-sm text-gray-300 mt-1" id="resRoll">রোল: </p>
+                <p class="text-sm text-gray-300" id="resClass">ক্লাস: </p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-gray-300">
+                    <thead class="bg-gray-800 text-white text-xs uppercase">
+                        <tr>
+                            <th class="px-4 py-2 rounded-l">বইয়ের নাম (Subject)</th>
+                            <th class="px-4 py-2 rounded-r text-right">প্রাপ্ত নাম্বার (Marks)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marksTableBody" class="divide-y divide-gray-800">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-gray-700 text-sm space-y-1 font-semibold">
+                <p class="text-gray-300">মোট মার্ক: <span id="resTotal" class="text-white"></span></p>
+                <p class="text-gray-300">গড় মার্ক: <span id="resAvg" class="text-white"></span></p>
+                <p class="text-gray-300">ফলাফল: <span id="resGrade" class="px-2 py-0.5 rounded text-xs"></span></p>
+            </div>
+        </div>
+
+        <div id="errorCard" class="hidden mt-6 p-4 bg-red-950/40 border border-red-900 text-red-200 text-sm rounded-lg text-center">
+            <i class="fas fa-exclamation-circle mr-2"></i> দুঃখিত! এই রোল বা তথ্য অনুযায়ী কোনো ফলাফল পাওয়া যায়নি। সঠিক তথ্য দিয়ে আবার চেষ্টা করুন।
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-950 text-white pt-16 pb-6 border-t border-gray-900">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 pb-8 border-b border-gray-900">
+            <div>
+                <h4 class="text-xl font-bold mb-4 text-red-400">যোগাযোগের ঠিকানা</h4>
+                <a href="https://maps.google.com/?q=Darul+Uloom+Al-Helal+Madrasah+Ferryghat+Kadamtali+Sylhet" target="_blank" class="group block text-gray-400 text-sm leading-relaxed hover:text-white transition">
+                    <p><i class="fas fa-map-marker-alt text-red-400 mr-2 group-hover:scale-110 transition inline-block"></i> দরিয়া শাহ মাজার রোড, ফেরীঘাট, কদমতলী, সিলেট।</p>
+                    <span class="text-xs text-sky-400 mt-1 inline-block underline">(ম্যাপে দেখতে এখানে ক্লিক করুন)</span>
+                </a>
+                <a href="mailto:darululoomalhelalmadrasha@gmail.com" class="block text-gray-400 text-sm mt-4 hover:text-sky-400 transition">
+                    <i class="fas fa-envelope text-red-400 mr-2"></i> darululoomalhelalmadrasha@gmail.com
+                </a>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4 text-red-400">জরুরী নাম্বার</h4>
+                <a href="tel:+8801304463839" class="block text-gray-400 text-sm hover:text-sky-400 transition py-1">
+                    <i class="fas fa-phone-alt text-sky-400 mr-2"></i> +8801304463839 <span class="text-xs text-gray-500">(কল করতে ক্লিক করুন)</span>
+                </a>
+                <a href="https://wa.me/8801852986173" target="_blank" class="block text-gray-400 text-sm mt-2 hover:text-green-400 transition py-1">
+                    <i class="fab fa-whatsapp text-green-400 mr-2"></i> +8801852986173 <span class="text-xs text-gray-500">(হোয়াটসঅ্যাপ মেসেজ দিন)</span>
+                </a>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.facebook.com/DarulUlloomAlHelalSylhet" target="_blank" class="text-2xl text-gray-400 hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4 text-red-400">লোকেশন ম্যাপ</h4>
+                <iframe src="https://maps.google.com/maps?q=Darul+Uloom+Al-Helal+Madrasah+Ferryghat+Kadamtali+Sylhet&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg opacity-80 hover:opacity-100 transition"></iframe>
+            </div>
+        </div>
+        <div class="text-center pt-6 text-xs text-gray-500">
+            © 2026 Darul Uloom Al-Helal Madrasah. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const sheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQvnlUilrzWLNrH32wDq41Spyd_hJygMOtQzhEEMYXrPApH0BwvmY84LpZV_7Wscm746t2IjfkaGqMX/pub?output=csv";
+
+        async function searchOnlineResult() {
+            const rollInput = document.getElementById('searchRoll').value.trim();
+            const examInput = document.getElementById('searchExam').value;
+            const yearInput = document.getElementById('searchYear').value;
+
+            const resultCard = document.getElementById('resultCard');
+            const errorCard = document.getElementById('errorCard');
+            const searchBtn = document.getElementById('searchBtn');
+
+            if(!rollInput) {
+                alert("অনুগ্রহ করে রোল নাম্বারটি লিখুন!");
+                return;
+            }
+
+            searchBtn.innerHTML = `<i class="fas fa-spinner animate-spin mr-2"></i> অনুসন্ধান করা হচ্ছে...`;
+            searchBtn.disabled = true;
+
+            try {
+                const response = await fetch(sheetCsvUrl + "&t=" + new Date().getTime());
+                const data = await response.text();
+                
+                const rows = data.split(/\r?\n/).map(row => {
+                    let result = [];
+                    let current = '';
+                    let inQuotes = false;
+                    for (let char of row) {
+                        if (char === '"') {
+                            inQuotes = !inQuotes;
+                        } else if (char === ',' && !inQuotes) {
+                            result.push(current.trim());
+                            current = '';
+                        } else {
+                            current += char;
+                        }
+                    }
+                    result.push(current.trim());
+                    return result;
+                });
+
+                let studentData = null;
+                for (let i = 1; i < rows.length; i++) {
+                    if (!rows[i][0]) continue;
+                    if (rows[i][0] === rollInput && rows[i][1] === examInput && rows[i][2] === yearInput) {
+                        studentData = rows[i];
+                        break;
+                    }
+                }
+
+                if (studentData) {
+                    errorCard.classList.add('hidden');
+                    
+                    document.getElementById('resName').innerText = "নাম: " + (studentData[3] || 'N/A');
+                    document.getElementById('resRoll').innerText = "রোল: " + studentData[0];
+                    
+                    const currentClass = studentData[4] || '';
+                    document.getElementById('resClass').innerText = "ক্লাস: " + currentClass;
+
+                    const tbody = document.getElementById('marksTableBody');
+                    tbody.innerHTML = "";
+
+                    let subjectsList = [];
+
+                    if (currentClass.includes("শিশু")) {
+                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
+                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
+                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
+                        if(studentData[8]) subjectsList.push({ bName: "৪) আরবী কায়দা", mark: parseInt(studentData[8]) });
+                    } 
+                    else if (currentClass.includes("প্রথম") || currentClass.includes("১ম")) {
+                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
+                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
+                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
+                        if(studentData[8]) subjectsList.push({ bName: "৪) আরবী কায়দা", mark: parseInt(studentData[8]) });
+                        if(studentData[9]) subjectsList.push({ bName: "৫) দ্বীন শিক্ষা", mark: parseInt(studentData[9]) });
+                    }
+                    else if (currentClass.includes("দ্বিতীয়") || currentClass.includes("২য়")) {
+                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
+                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
+                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
+                        if(studentData[8]) subjectsList.push({ bName: "৪) আমপারা", mark: parseInt(studentData[8]) });
+                        if(studentData[9]) subjectsList.push({ bName: "৫) দ্বীন শিক্ষা", mark: parseInt(studentData[9]) });
+                        if(studentData[10]) subjectsList.push({ bName: "৬) উর্দু কাআবজাদ", mark: parseInt(studentData[10]) });
+                    }
+                    else if (currentClass.includes("তৃ") || currentClass.includes("৩")) {
+                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
+                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
+                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
+                        if(studentData[8]) subjectsList.push({ bName: "৪) কোরআন শরিফ", mark: parseInt(studentData[8]) });
+                        if(studentData[9]) subjectsList.push({ bName: "৫) দ্বীন শিক্ষা", mark: parseInt(studentData[9]) });
+                        if(studentData[10]) subjectsList.push({ bName: "৬) মেরি কিতাব", mark: parseInt(studentData[10]) });
+                        if(studentData[11]) subjectsList.push({ bName: "৭) আদ্দুরুসুল আরাবিয়্যাহ", mark: parseInt(studentData[11]) });
+                    }
+                    else {
+                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
+                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
+                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
+                    }
+
+                    let totalMarks = 0;
+                    let isFailed = false;
+                    let activeSubjectsCount = 0;
+
+                    subjectsList.forEach(sub => {
+                        totalMarks += sub.mark;
+                        activeSubjectsCount++;
+                        if(sub.mark < 33) isFailed = true;
+
+                        const row = `<tr>
+                            <td class="px-4 py-2.5 font-medium border-b border-gray-800">${sub.bName}</td>
+                            <td class="px-4 py-2.5 text-right font-bold border-b border-gray-800 text-sky-400">${sub.mark}</td>
+                        </tr>`;
+                        tbody.innerHTML += row;
+                    });
+
+                    const avgMarks = activeSubjectsCount > 0 ? (totalMarks / activeSubjectsCount).toFixed(2) : 0;
+                    document.getElementById('resTotal').innerText = totalMarks;
+                    document.getElementById('resAvg').innerText = avgMarks;
+
+                    let gradeText = "";
+                    const gradeBadge = document.getElementById('resGrade');
+                    
+                    if (isFailed) {
+                        gradeText = "ফেল (Fail)";
+                        gradeBadge.className = "px-2 py-0.5 rounded text-xs bg-red-900 text-red-300";
+                    } else if (avgMarks >= 80) {
+                        gradeText = "পাশ (A+)";
+                        gradeBadge.className = "px-2 py-0.5 rounded text-xs bg-green-900 text-green-300";
+                    } else {
+                        gradeText = "পাশ";
+                        gradeBadge.className = "px-2 py-0.5 rounded text-xs bg-blue-900 text-blue-300";
+                    }
+                    gradeBadge.innerText = gradeText;
+
+                    resultCard.classList.remove('hidden');
+                } else {
+                    resultCard.classList.add('hidden');
+                    errorCard.classList.remove('hidden');
+                }
+
+            } catch (error) {
+                console.error(error);
+                resultCard.classList.add('hidden');
+                errorCard.classList.remove('hidden');
+            } finally {
+                searchBtn.innerHTML = `<i class="fas fa-search mr-2"></i> ফলাফল দেখুন (Search Result)`;
+                searchBtn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
