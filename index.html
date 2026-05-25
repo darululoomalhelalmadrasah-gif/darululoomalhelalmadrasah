@@ -33,7 +33,7 @@
                 <a href="#about" class="text-gray-300 hover:text-red-400 transition">আমাদের সম্পর্কে</a>
                 <a href="#teachers" class="text-gray-300 hover:text-red-400 transition">শিক্ষকবৃন্দ</a>
                 <a href="#registration" class="text-gray-300 hover:text-red-400 transition">ভর্তি ফরম</a>
-                <a href="#result" class="text-gray-300 hover:text-red-400 transition">ফলাফল</a>
+                <a href="#result" class="text-gray-300 hover:text-red-400 transition">ফলাफल</a>
                 <a href="#contact" class="text-gray-300 hover:text-red-400 transition">যোগাযোগ</a>
             </nav>
         </div>
@@ -315,7 +315,7 @@
                         if(studentData[8]) subjectsList.push({ bName: "৪) আরবী কায়দা", mark: parseInt(studentData[8]) });
                         if(studentData[9]) subjectsList.push({ bName: "৫) দ্বীন শিক্ষা", mark: parseInt(studentData[9]) });
                     }
-                    else if (currentClass.includes("দ্বিতীয়") || currentClass.includes("২য়")) {
+                    else if (currentClass.includes("দ্বি") || currentClass.includes("২য়")) {
                         if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
                         if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
                         if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
@@ -347,9 +347,12 @@
                         activeSubjectsCount++;
                         if(sub.mark < 33) isFailed = true;
 
+                        // ৩৩-এর নিচে হলে Tailwind-এর টেক্সট কালার লাল (text-red-500) হবে, অন্যথায় স্বাভাবিক আকাশী রঙ (text-sky-400) থাকবে
+                        const markColorClass = sub.mark < 33 ? 'text-red-500' : 'text-sky-400';
+
                         const row = `<tr>
                             <td class="px-4 py-2.5 font-medium border-b border-gray-800">${sub.bName}</td>
-                            <td class="px-4 py-2.5 text-right font-bold border-b border-gray-800 text-sky-400">${sub.mark}</td>
+                            <td class="px-4 py-2.5 text-right font-bold border-b border-gray-800 ${markColorClass}">${sub.mark}</td>
                         </tr>`;
                         tbody.innerHTML += row;
                     });
