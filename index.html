@@ -108,7 +108,7 @@
                     <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
 
-                <div onclick="showTeacherDetails('মাওলানা মাসুদ আহমদ', 'সহকারী শিক্ষক', 'teacher3.jpg', 'অফিসিয়াল নাম্বার', 'info@madrasha.com', 'কামিল (হাদীস বিভাগ), ঢাকা আলিয়া মাদ্রাসা।', 'কোমলমতি শিক্ষার্থীদের সাধারণ বিষয়াদি যেমন বাংলা, ইংরেজি ও গণিত অত্যন্ত যত্নসহকারে পাঠদান করান।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
+                <div onclick="showTeacherDetails('মাওলানা মাসুদ আহমদ', 'সহকারী শিক্ষক', 'teacher3.jpg', 'অফিসিয়াল নাম্বার', 'info@madrasha.com', 'কামিল (হাদীস বিভাগ), ঢাকা আলিয়া মাদ্রাসা।', 'কোमलমতি শিক্ষার্থীদের সাধারণ বিষয়াদি যেমন বাংলা, ইংরেজি ও গণিত অত্যন্ত যত্নসহকারে পাঠদান করান।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
                         <img src="teacher3.jpg" alt="মাওলানা মাসুদ আহমদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
@@ -376,43 +376,31 @@
                     const tbody = document.getElementById('marksTableBody');
                     tbody.innerHTML = "";
 
+                    // গুগল শিটের কলাম হেডার (F থেকে O) অনুযায়ী ডাইনামিক অ্যারে
+                    const subjectsDef = [
+                        { name: "১) বাংলা", index: 5 },
+                        { name: "২) ইংরেজি", index: 6 },
+                        { name: "৩) গণিত", index: 7 },
+                        { name: "৪) আরবী কায়দা", index: 8 },
+                        { name: "৫) দ্বীন শিক্ষা", index: 9 },
+                        { name: "৬) উর্দু কাআবজাদ", index: 10 },
+                        { name: "৭) আমপারা", index: 11 },
+                        { name: "৮) কোরআন শরিফ", index: 12 },
+                        { name: "৯) মেরি কিতাব", index: 13 },
+                        { name: "১০) আদ্দুরুসুল আরাবিয়্যাহ", index: 14 }
+                    ];
+
                     let subjectsList = [];
 
-                    if (currentClass.includes("নূরানী শিশু শ্রেণী") || currentClass.includes("শিশু")) {
-                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
-                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
-                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
-                        if(studentData[8]) subjectsList.push({ bName: "৪) আরবী কায়দা", mark: parseInt(studentData[8]) });
-                    } 
-                    else if (currentClass.includes("প্রথম") || currentClass.includes("১ম")) {
-                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
-                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
-                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
-                        if(studentData[8]) subjectsList.push({ bName: "৪) আরবী কায়দা", mark: parseInt(studentData[8]) });
-                        if(studentData[9]) subjectsList.push({ bName: "৫) দ্বীন শিক্ষা", mark: parseInt(studentData[9]) });
-                    }
-                    else if (currentClass.includes("দ্বি") || currentClass.includes("২য়")) {
-                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
-                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
-                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
-                        if(studentData[8]) subjectsList.push({ bName: "৪) আমপারা", mark: parseInt(studentData[8]) });
-                        if(studentData[9]) subjectsList.push({ bName: "৫) দ্বীন শিক্ষা", mark: parseInt(studentData[9]) });
-                        if(studentData[10]) subjectsList.push({ bName: "৬) উর্দু কাআবজাদ", mark: parseInt(studentData[10]) });
-                    }
-                    else if (currentClass.includes("তৃ") || currentClass.includes("৩")) {
-                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
-                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
-                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
-                        if(studentData[8]) subjectsList.push({ bName: "৪) কোরআন শরিф", mark: parseInt(studentData[8]) });
-                        if(studentData[9]) subjectsList.push({ bName: "৫) দ্বীন শিক্ষা", mark: parseInt(studentData[9]) });
-                        if(studentData[10]) subjectsList.push({ bName: "৬) মেরি কিতাব", mark: parseInt(studentData[10]) });
-                        if(studentData[11]) subjectsList.push({ bName: "৭) আদ্দুরুসুল আরাবিয়্যাহ", mark: parseInt(studentData[11]) });
-                    }
-                    else {
-                        if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
-                        if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
-                        if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
-                    }
+                    // শিটের কলামে যে বিষয়ের মার্কস ইনপুট দেওয়া থাকবে, সেটিই টেবিলে শো করবে
+                    subjectsDef.forEach(sub => {
+                        if (studentData[sub.index] !== undefined && studentData[sub.index] !== "") {
+                            subjectsList.push({
+                                bName: sub.name,
+                                mark: parseInt(studentData[sub.index]) || 0
+                            });
+                        }
+                    });
 
                     let totalMarks = 0;
                     let isFailed = false;
