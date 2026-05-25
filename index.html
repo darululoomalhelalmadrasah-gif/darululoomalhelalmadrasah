@@ -33,7 +33,7 @@
                 <a href="#about" class="text-gray-300 hover:text-red-400 transition">আমাদের সম্পর্কে</a>
                 <a href="#teachers" class="text-gray-300 hover:text-red-400 transition">শিক্ষকবৃন্দ</a>
                 <a href="#registration" class="text-gray-300 hover:text-red-400 transition">ভর্তি ফরম</a>
-                <a href="#result" class="text-gray-300 hover:text-red-400 transition">ফলাफल</a>
+                <a href="#result" class="text-gray-300 hover:text-red-400 transition">ফলাফল</a>
                 <a href="#contact" class="text-gray-300 hover:text-red-400 transition">যোগাযোগ</a>
             </nav>
         </div>
@@ -85,44 +85,85 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h3 class="text-3xl font-bold text-white">আমাদের শিক্ষকবৃন্দ</h3>
+                <p class="text-xs text-gray-400 mt-1">বিস্তারিত তথ্য দেখতে শিক্ষকের প্রোফাইলে ক্লিক করুন</p>
                 <div class="w-24 h-1 bg-red-600 mx-auto mt-2"></div>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300">
+                
+                <div onclick="showTeacherDetails('মাওলানা আবু নছর খালেদ', 'মুহতামিম', 'teacher1.jpg', '01304463839', 'darululoomalhelalmadrasha@gmail.com', 'দাওরায়ে হাদীস (মাষ্টার্স), বেফাকুল মাদারিসিল আরাবিয়া বাংলাদেশ।', '১০ বছরেরও বেশি সময় ধরে বিভিন্ন দ্বীনি প্রতিষ্ঠানে সুনামের সাথে মুহতামিম ও প্রধান শিক্ষকের দায়িত্ব পালন করছেন।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
-                        <img src="teacher1.jpg" alt="মাওলানা আবু নছর খালেদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
+                        <img src="teacher1.jpg" alt="মাওলানা আবু নছর খালেদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
-                    <h4 class="font-bold text-lg text-white">মাওলানা আবু নছর খালেদ</h4>
+                    <h4 class="font-bold text-lg text-white group-hover:text-sky-400 transition">মাওলানা আবু নছর খালেদ</h4>
                     <p class="text-red-400 text-sm font-medium">মুহতামিম</p>
-                    <a href="tel:+8801304463839" class="inline-block text-xs text-gray-400 mt-2 hover:text-sky-400 transition"><i class="fas fa-phone-alt text-sky-400 mr-1"></i> 01304463839</a>
+                    <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
-                <div class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300">
+
+                <div onclick="showTeacherDetails('মাওলানা এনামুল হক', 'সহকারী শিক্ষক', 'teacher2.jpg', '01758777092', 'enamulhaque@gmail.com', 'উচ্চতর আরবী সাহিত্য ও ইসলামি শরীয়াহ বিভাগ।', 'নূরানী ও হিফজ বিভাগের শিক্ষার্থীদের আরবী ও ইসলামিক বুনিয়াদী শিক্ষা প্রদানে ৪ বছরের বিশেষ অভিজ্ঞতা।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
-                        <img src="teacher2.jpg" alt="মাওলানা এনামুল হক" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
+                        <img src="teacher2.jpg" alt="মাওলানা এনামুল হক" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
-                    <h4 class="font-bold text-lg text-white">মাওলানা এনামুল হক</h4>
+                    <h4 class="font-bold text-lg text-white group-hover:text-sky-400 transition">মাওলানা এনামুল হক</h4>
                     <p class="text-red-400 text-sm font-medium">সহকারী শিক্ষক</p>
-                    <a href="tel:+8801758777092" class="inline-block text-xs text-gray-400 mt-2 hover:text-sky-400 transition"><i class="fas fa-phone-alt text-sky-400 mr-1"></i> 01758777092</a>
+                    <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
-                <div class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300">
+
+                <div onclick="showTeacherDetails('মাওলানা মাসুদ আহমদ', 'সহকারী শিক্ষক', 'teacher3.jpg', 'অফিসিয়াল নাম্বার', 'info@madrasha.com', 'কামিল (হাদীস বিভাগ), ঢাকা আলিয়া মাদ্রাসা।', 'কোমলমতি শিক্ষার্থীদের সাধারণ বিষয়াদি যেমন বাংলা, ইংরেজি ও গণিত অত্যন্ত যত্নসহকারে পাঠদান করান।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
-                        <img src="teacher3.jpg" alt="মাওলানা মাসুদ আহমদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
+                        <img src="teacher3.jpg" alt="মাওলানা মাসুদ আহমদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
-                    <h4 class="font-bold text-lg text-white">মাওলানা মাসুদ আহমদ</h4>
+                    <h4 class="font-bold text-lg text-white group-hover:text-sky-400 transition">মাওলানা মাসুদ আহমদ</h4>
                     <p class="text-red-400 text-sm font-medium">সহকারী শিক্ষক</p>
-                    <p class="text-xs text-gray-400 mt-2"><i class="fas fa-phone-alt text-gray-500 mr-1"></i> অফিসিয়াল নাম্বার</p>
+                    <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
-                <div class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300">
+
+                <div onclick="showTeacherDetails('হা. হাফিজুর রহমান', 'সহকারী শিক্ষক', 'teacher4.jpg', 'অফিসিয়াল নাম্বার', 'info@madrasha.com', 'হাফেজ-এ-কোরআন (আন্তর্জাতিক তাজবীদ প্রাপ্ত)', 'দীর্ঘ ৫ বছর যাবত হিফজ বিভাগের ছাত্রদের সহীহ-শুদ্ধভাবে পবিত্র কোরআন মুখস্থ করানোর কাজে নিয়োজিত আছেন।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 pointer group cursor-pointer">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
-                        <img src="teacher4.jpg" alt="হা. হাফিজুর রহমান" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
+                        <img src="teacher4.jpg" alt="হা. হাফিজুর রহমান" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
-                    <h4 class="font-bold text-lg text-white">হা. হাফিজুর রহমান</h4>
+                    <h4 class="font-bold text-lg text-white group-hover:text-sky-400 transition">হা. হাফিজুর রহমান</h4>
                     <p class="text-red-400 text-sm font-medium">সহকারী শিক্ষক</p>
-                    <p class="text-xs text-gray-400 mt-2"><i class="fas fa-phone-alt text-gray-500 mr-1"></i> অফিসিয়াল নাম্বার</p>
+                    <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
+
             </div>
         </div>
     </section>
+
+    <div id="teacherModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+        <div class="bg-slate-950 border border-gray-800 w-full max-w-lg rounded-2xl shadow-2xl relative overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+            <button onclick="closeTeacherModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-xl cursor-pointer">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="p-6 text-center border-b border-gray-900 bg-gradient-to-b from-blue-950/20 to-transparent">
+                <div class="w-24 h-24 mx-auto mb-3 relative">
+                    <img id="modalTeacherImg" src="" alt="" class="w-full h-full object-cover rounded-full border-2 border-sky-500 shadow-md">
+                </div>
+                <h3 id="modalTeacherName" class="text-2xl font-bold text-white"></h3>
+                <p id="modalTeacherDesignation" class="text-red-400 font-semibold text-sm"></p>
+            </div>
+            <div class="p-6 space-y-4 text-sm text-gray-300">
+                <div>
+                    <h5 class="text-sky-400 font-bold mb-1"><i class="fas fa-graduation-cap mr-1.5"></i> শিক্ষাগত যোগ্যতা:</h5>
+                    <p id="modalTeacherEdu" class="leading-relaxed text-gray-400"></p>
+                </div>
+                <div>
+                    <h5 class="text-sky-400 font-bold mb-1"><i class="fas fa-briefcase mr-1.5"></i> অভিজ্ঞতা ও পরিচিতি:</h5>
+                    <p id="modalTeacherExp" class="leading-relaxed text-gray-400"></p>
+                </div>
+                <div class="pt-3 border-t border-gray-900 grid grid-cols-2 gap-4 text-xs">
+                    <div>
+                        <span class="text-gray-500 block">মোবাইল নাম্বার:</span>
+                        <span id="modalTeacherPhone" class="font-bold text-white"></span>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 block">ইমেইল ঠিকানা:</span>
+                        <span id="modalTeacherEmail" class="font-bold text-white break-all"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="registration" class="py-16 container mx-auto px-4 max-w-2xl text-center">
         <div class="bg-slate-900 p-8 rounded-2xl shadow-2xl border border-gray-800">
@@ -147,23 +188,25 @@
         <div class="space-y-4">
             <div>
                 <label class="block text-sm font-medium text-gray-300 mb-1">রোল নাম্বার (Roll No)</label>
-                <input type="text" id="searchRoll" placeholder="উদা: 100" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-red-500 transition">
+                <input type="text" id="searchRoll" placeholder="উদা: 000" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-400/50 focus:outline-none focus:border-red-500 transition">
             </div>
             <div>
                 <label class="block text-sm font-medium text-gray-300 mb-1">পরীক্ষার নাম (Exam Type)</label>
-                <select id="searchExam" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-red-500 transition">
-                    <option value="প্রথম সাময়িক পরিক্ষা">প্রথম সাময়িক পরিক্ষা</option>
-                    <option value="দ্বিতীয় সাময়িক পরিক্ষা">দ্বিতীয় সাময়িক পরিক্ষা</option>
-                    <option value="বার্ষিক পরীক্ষা">বার্ষিক পরীক্ষা</option>
+                <select id="searchExam" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-gray-400/50 focus:outline-none focus:border-red-500 transition" onchange="this.classList.remove('text-gray-400/50'); this.classList.add('text-white')">
+                    <option value="" disabled selected hidden>নির্বাচন করুন</option>
+                    <option value="প্রথম সাময়িক পরিক্ষা" class="text-white bg-slate-900">প্রথম সাময়িক পরিক্ষা</option>
+                    <option value="দ্বিতীয় সাময়িক পরিক্ষা" class="text-white bg-slate-900">দ্বিতীয় সাময়িক পরিক্ষা</option>
+                    <option value="বার্ষিক পরীক্ষা" class="text-white bg-slate-900">বার্ষিক পরীক্ষা</option>
                 </select>
             </div>
             <div>
                 <label class="block text-sm font-medium text-gray-300 mb-1">সাল (Year)</label>
-                <select id="searchYear" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-red-500 transition">
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026" selected>2026</option>
-                    <option value="2027">2027</option>
+                <select id="searchYear" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-gray-400/50 focus:outline-none focus:border-red-500 transition" onchange="this.classList.remove('text-gray-400/50'); this.classList.add('text-white')">
+                    <option value="" disabled selected hidden>নির্বাচন করুন</option>
+                    <option value="2024" class="text-white bg-slate-900">2024</option>
+                    <option value="2025" class="text-white bg-slate-900">2025</option>
+                    <option value="2026" class="text-white bg-slate-900">2026</option>
+                    <option value="2027" class="text-white bg-slate-900">2027</option>
                 </select>
             </div>
             <button onclick="searchOnlineResult()" id="searchBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition shadow-md flex items-center justify-center cursor-pointer">
@@ -234,12 +277,39 @@
         </div>
         <div class="text-center pt-6 text-xs text-gray-500">
             © 2026 Darul Uloom Al-Helal Madrasah. All Rights Reserved. Developed by Anamul Haque
-        
         </div>
     </footer>
 
     <script>
         const sheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQvnlUilrzWLNrH32wDq41Spyd_hJygMOtQzhEEMYXrPApH0BwvmY84LpZV_7Wscm746t2IjfkaGqMX/pub?output=csv";
+
+        // পরিবর্তন: শিক্ষকদের পপ-আপ মোডাল কন্ট্রোল করার ফাংশন
+        function showTeacherDetails(name, designation, img, phone, email, education, experience) {
+            document.getElementById('modalTeacherName').innerText = name;
+            document.getElementById('modalTeacherDesignation').innerText = designation;
+            document.getElementById('modalTeacherImg').src = img;
+            document.getElementById('modalTeacherImg').alt = name;
+            document.getElementById('modalTeacherPhone').innerText = phone;
+            document.getElementById('modalTeacherEmail').innerText = email;
+            document.getElementById('modalTeacherEdu').innerText = education;
+            document.getElementById('modalTeacherExp').innerText = experience;
+            
+            // মোডাল ওপেন
+            const modal = document.getElementById('teacherModal');
+            modal.classList.remove('hidden');
+        }
+
+        function closeTeacherModal() {
+            document.getElementById('teacherModal').classList.add('hidden');
+        }
+
+        // মোডালের বাইরে ক্লিক করলে বন্ধ হবে
+        window.onclick = function(event) {
+            const modal = document.getElementById('teacherModal');
+            if (event.target == modal) {
+                modal.classList.add('hidden');
+            }
+        }
 
         async function searchOnlineResult() {
             const rollInput = document.getElementById('searchRoll').value.trim();
@@ -252,6 +322,11 @@
 
             if(!rollInput) {
                 alert("অনুগ্রহ করে রোল নাম্বারটি লিখুন!");
+                return;
+            }
+
+            if(!examInput || !yearInput) {
+                alert("অনুগ্রহ করে পরীক্ষার নাম এবং সাল নির্বাচন করুন!");
                 return;
             }
 
@@ -303,7 +378,7 @@
 
                     let subjectsList = [];
 
-                    if (currentClass.includes("শিশু")) {
+                    if (currentClass.includes("নূরানী শিশু শ্রেণী") || currentClass.includes("শিশু")) {
                         if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
                         if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
                         if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
@@ -328,7 +403,7 @@
                         if(studentData[5]) subjectsList.push({ bName: "১) বাংলা", mark: parseInt(studentData[5]) });
                         if(studentData[6]) subjectsList.push({ bName: "২) ইংরেজি", mark: parseInt(studentData[6]) });
                         if(studentData[7]) subjectsList.push({ bName: "৩) গণিত", mark: parseInt(studentData[7]) });
-                        if(studentData[8]) subjectsList.push({ bName: "৪) কোরআন শরিফ", mark: parseInt(studentData[8]) });
+                        if(studentData[8]) subjectsList.push({ bName: "৪) কোরআন শরিф", mark: parseInt(studentData[8]) });
                         if(studentData[9]) subjectsList.push({ bName: "৫) দ্বীন শিক্ষা", mark: parseInt(studentData[9]) });
                         if(studentData[10]) subjectsList.push({ bName: "৬) মেরি কিতাব", mark: parseInt(studentData[10]) });
                         if(studentData[11]) subjectsList.push({ bName: "৭) আদ্দুরুসুল আরাবিয়্যাহ", mark: parseInt(studentData[11]) });
@@ -348,7 +423,6 @@
                         activeSubjectsCount++;
                         if(sub.mark < 33) isFailed = true;
 
-                        // ৩৩-এর নিচে হলে Tailwind-এর টেক্সট কালার লাল (text-red-500) হবে, অন্যথায় স্বাভাবিক আকাশী রঙ (text-sky-400) থাকবে
                         const markColorClass = sub.mark < 33 ? 'text-red-500' : 'text-sky-400';
 
                         const row = `<tr>
