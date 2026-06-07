@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: darululoomalhelalmadrasah-gif/darululoomalhelalmadrasah
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  - name: "teachers"
+    label: "শিক্ষকদের তথ্য"
+    folder: "teachers"
+    create: true
+    fields:
+      - { label: "শিক্ষকের নাম", name: "title", widget: "string" }
+      - { label: "পদবী", name: "designation", widget: "string" }
+      - { label: "ছবি", name: "image", widget: "image" }
+      - { label: "বিস্তারিত তথ্য", name: "body", widget: "markdown" }
