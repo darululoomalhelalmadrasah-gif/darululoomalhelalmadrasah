@@ -15,4 +15,4 @@ collections:
       - { label: "শিক্ষকের নাম", name: "title", widget: "string" }
       - { label: "পদবী", name: "designation", widget: "string" }
       - { label: "ছবি", name: "image", widget: "image" }
-      - { label: "বিস্তারিত তথ্য", name: "body", widget: "markdown" } 
+      - { label: "বিস্তারিত তথ্য", name: "body", widget: "markdown" }
