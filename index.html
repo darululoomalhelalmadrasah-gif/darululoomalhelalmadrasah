@@ -6,7 +6,6 @@
     <title>Darul Uloom Al-Helal Madrasah</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         body {
@@ -35,7 +34,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- ব্যাক-টু-টপ বাটন -->
     <button id="backToTop" class="hidden fixed bottom-20 right-4 z-[90] bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-2xl transition duration-300">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -43,7 +41,6 @@
     <header class="shadow-md sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <!-- লোগোর আইডি বদলে নতুন আইডি দেওয়া হয়েছে যেন ব্রাউজার সরাসরি ফোল্ডার থেকে ফাইলটি নেয় -->
                 <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full editable-img" id="site-fresh-logo" onerror="this.src='https://via.placeholder.com/50'">
                 <div>
                     <h1 class="text-xl font-bold tracking-wide text-white editable-text" id="site-title-bn">দারুল উলূম আল-হেলাল মাদ্রাসা</h1>
@@ -51,7 +48,6 @@
                 </div>
             </div>
 
-            <!-- মোবাইল মেনু বাটন -->
             <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
@@ -68,7 +64,6 @@
             </nav>
         </div>
         
-        <!-- মোবাইলের জন্য ড্রপডাউন মেনু কন্টেইনার -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-950 border-b border-gray-800 px-4 pb-4 space-y-2">
             <a href="#about" class="text-gray-300 hover:text-red-400 transition block py-2 border-b border-gray-900">আমাদের সম্পর্কে</a>
             <a href="#prayer-times" class="text-gray-300 hover:text-red-400 transition block py-2 border-b border-gray-900">নামাজের সময়</a>
@@ -101,7 +96,6 @@
         </div>
     </div>
 
-    <!-- 🌟 নামাজের সময়সূচী উইজেট -->
     <section id="prayer-times" class="py-12 bg-slate-900/60 border-b border-gray-950" data-aos="fade-up">
         <div class="container mx-auto px-4 text-center">
             <h3 class="text-2xl font-bold text-white mb-6"><i class="fas fa-clock text-sky-400 mr-2"></i>আজকের নামাজের সময়সূচী (সিলেট)</h3>
@@ -164,39 +158,55 @@
                 <div class="w-24 h-1 bg-red-600 mx-auto mt-2"></div>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div onclick="handleTeacherClick(event, 'মাওলানা আবু নছর খালেদ', 'মুহতামিম', 'teacher1.jpg', '01304463839', 'darululoomalhelalmadrasha@gmail.com', 'দাওরায়ে হাদীস (মাষ্টারส์), বেফাকুল মাদারিসিল আরাбиয়া বাংলাদেশ।', '১০ বছরেরও বেশি সময় ধরে বিভিন্ন দ্বীনি প্রতিষ্ঠানে সুনামের সাথে মুহতামিম ও প্রধান শিক্ষকের দায়িত্ব পালন করছেন।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
+                <div onclick="handleTeacherClick(event, 't1')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
                         <img src="teacher1.jpg" alt="মাওলানা আবু নছর খালেদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition editable-img" id="timg-1" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
                     <h4 class="font-bold text-lg text-white group-hover:text-sky-400 transition" id="t1-name">মাওলানা আবু নছর খালেদ</h4>
                     <p class="text-red-400 text-sm font-medium" id="t1-desg">মুহতামিম</p>
+                    <span id="t1-phone" class="hidden">01304463839</span>
+                    <span id="t1-email" class="hidden">darululoomalhelalmadrasha@gmail.com</span>
+                    <span id="t1-edu" class="hidden">দাওরায়ে হাদীস (মাষ্টারส์), বেফাকুল মাদারিসিল আরাбиয়া বাংলাদেশ।</span>
+                    <span id="t1-exp" class="hidden">১০ বছরেরও বেশি সময় ধরে বিভিন্ন দ্বীনি প্রতিষ্ঠানে সুনামের সাথে মুহতামিম ও প্রধান শিক্ষকের দায়িত্ব পালন করছেন।</span>
                     <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
 
-                <div onclick="handleTeacherClick(event, 'মাওলানা এনামুল হক', 'सहকারী শিক্ষক', 'teacher2.jpg', '01758777092', 'enamulhaque@gmail.com', 'উচ্চতর আরবী সাহিত্য ও ইসলামি শরীয়াহ বিভাগ।', 'নূরানী ও হিফজ বিভাগের শিক্ষার্থীদের আরবী ও ইসলামিক বুনিয়াদী শিক্ষা প্রদানে ৪ বছরের বিশেষ অভিজ্ঞতা।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
+                <div onclick="handleTeacherClick(event, 't2')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
                         <img src="teacher2.jpg" alt="মাওলানা এনামুল হক" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition editable-img" id="timg-2" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
                     <h4 class="font-bold text-lg text-white group-hover:text-sky-400 transition" id="t2-name">মাওলানা এনামুল হক</h4>
-                    <p class="text-red-400 text-sm font-medium" id="t2-desg">सहকারী শিক্ষক</p>
+                    <p class="text-red-400 text-sm font-medium" id="t2-desg">সহকারী শিক্ষক</p>
+                    <span id="t2-phone" class="hidden">01758777092</span>
+                    <span id="t2-email" class="hidden">enamulhaque@gmail.com</span>
+                    <span id="t2-edu" class="hidden">উচ্চতর আরবী সাহিত্য ও ইসলামি শরীয়াহ বিভাগ।</span>
+                    <span id="t2-exp" class="hidden">নূরানী ও হিফজ বিভাগের শিক্ষার্থীদের আরবী ও ইসলামিক বুনিয়াদী শিক্ষা প্রদানে ৪ বছরের বিশেষ অভিজ্ঞতা।</span>
                     <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
 
-                <div onclick="handleTeacherClick(event, 'মাওলানা মাসুদ আহমদ', 'সহকারী শিক্ষক', 'teacher3.jpg', 'অফিসিয়াল নাম্বার', 'info@madrasha.com', 'কামিল (হাদীস বিভাগ), ঢাকা আলিয়া মাদ্রাসা।', 'কোमलমতি শিক্ষার্থীদের সাধারণ বিষয়াদি যেমন বাংলা, ইংরেজি ও গণিত অত্যন্ত যত্নসহকারে পাঠদান করান।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
+                <div onclick="handleTeacherClick(event, 't3')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 cursor-pointer group">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
                         <img src="teacher3.jpg" alt="মাওলানা মাসুদ আহমদ" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition editable-img" id="timg-3" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
                     <h4 class="font-bold text-lg text-white group-hover:text-sky-400 transition" id="t3-name">মাওলানা মাসুদ আহমদ</h4>
                     <p class="text-red-400 text-sm font-medium" id="t3-desg">সহকারী শিক্ষক</p>
+                    <span id="t3-phone" class="hidden">অফিসিয়াল নাম্বার</span>
+                    <span id="t3-email" class="hidden">info@madrasha.com</span>
+                    <span id="t3-edu" class="hidden">কামিল (হাদীস বিভাগ), ঢাকা আলিয়া মাদ্রাসা।</span>
+                    <span id="t3-exp" class="hidden">কোमलমতি শিক্ষার্থীদের সাধারণ বিষয়াদি যেমন বাংলা, ইংরেজি ও গণিত অত্যন্ত যত্নসহকারে পাঠদান করান।</span>
                     <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
 
-                <div onclick="handleTeacherClick(event, 'হা. হাফিজুর রহমান', 'সহকারী শিক্ষক', 'teacher4.jpg', 'অফিসিয়াল নাম্বার', 'info@madrasha.com', 'হাফেজ-এ-কোরআন (আন্তর্জাতিক তাজবীদ প্রাপ্ত)', 'দীর্ঘ ৫ বছর যাবত হিফজ বিভাগের ছাত্রদের সহীহ-শুদ্ধভাবে পবিত্র কোরআন মুখস্থ করানোর কাজে নিয়োজিত আছেন।')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 group cursor-pointer">
+                <div onclick="handleTeacherClick(event, 't4')" class="bg-slate-900 p-6 rounded-xl text-center shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 group cursor-pointer">
                     <div class="w-28 h-28 mx-auto mb-4 relative">
                         <img src="teacher4.jpg" alt="হা. হাফিজুর রহমান" class="w-full h-full object-cover rounded-full border-2 border-sky-400 shadow-md group-hover:scale-105 transition editable-img" id="timg-4" onerror="this.outerHTML='<div class=\'w-full h-full bg-blue-950 rounded-full flex items-center justify-center text-sky-400 text-4xl\'><i class=\'fas fa-user-tie\'></i></div>'">
                     </div>
                     <h4 class="font-bold text-lg text-white group-hover:text-sky-400 transition" id="t4-name">হা. হাফিজুর রহমান</h4>
                     <p class="text-red-400 text-sm font-medium" id="t4-desg">সহকারী শিক্ষক</p>
+                    <span id="t4-phone" class="hidden">অফিসিয়াল নাম্বার</span>
+                    <span id="t4-email" class="hidden">info@madrasha.com</span>
+                    <span id="t4-edu" class="hidden">হাফেজ-এ-কোরআন (আন্তর্জাতিক তাজবীদ প্রাপ্ত)</span>
+                    <span id="t4-exp" class="hidden">দীর্ঘ ৫ বছর যাবত হিফজ বিভাগের छात्रों সহীহ-শুদ্ধভাবে পবিত্র কোরআন মুখস্থ করানোর কাজে নিয়োজিত আছেন।</span>
                     <span class="text-xs text-gray-500 mt-2 block underline group-hover:text-gray-300">বিস্তারিত দেখুন</span>
                 </div>
             </div>
@@ -212,7 +222,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="bg-slate-900 rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 group">
                 <div class="h-52 overflow-hidden bg-slate-950">
-                    <img src="gallery1.jpg" alt="মাদ্রাসার ভবন" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-1" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Madrasah+Photo+1'">
+                    <img src="gallery1.jpg" alt="মাদ্রাসার ভবন" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-1" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Photo+1'">
                 </div>
                 <div class="p-4">
                     <h4 class="font-bold text-white text-base editable-text" id="g1-title">মাদ্রাসার প্রধান ফটক ও ভবন</h4>
@@ -221,26 +231,52 @@
             </div>
             <div class="bg-slate-900 rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 group">
                 <div class="h-52 overflow-hidden bg-slate-950">
-                    <img src="gallery2.jpg" alt="শ্রেণীকক্ষের পাঠদান" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-2" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Madrasah+Photo+2'">
+                    <img src="gallery2.jpg" alt="শ্রেণীকক্ষের পাঠদান" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-2" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Photo+2'">
                 </div>
                 <div class="p-4">
                     <h4 class="font-bold text-white text-base editable-text" id="g2-title">নূরানী বিভাগের পাঠদান কার্যক্রম</h4>
-                    <p class="text-gray-400 text-xs mt-1 leading-relaxed editable-text" id="g2-desc">কোमलমতি শিশুদের অত্যন্ত যত্ন ও আধুনিক ডিজিটাল পদ্ধতিতে আরবী ও বুনিয়াদী শিক্ষা প্রদান করা হচ্ছে।</p>
+                    <p class="text-gray-400 text-xs mt-1 leading-relaxed editable-text" id="g2-desc">কোমলমতি শিশুদের অত্যন্ত যত্ন ও আধুনিক ডিজিটাল পদ্ধতিতে আরবী ও বুনিয়াদী শিক্ষা প্রদান করা হচ্ছে।</p>
                 </div>
             </div>
             <div class="bg-slate-900 rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 group">
                 <div class="h-52 overflow-hidden bg-slate-950">
-                    <img src="gallery3.jpg" alt="হিফজ বিভাগ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-3" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Madrasah+Photo+3'">
+                    <img src="gallery3.jpg" alt="হিফজ বিভাগ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-3" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Photo+3'">
                 </div>
                 <div class="p-4">
                     <h4 class="font-bold text-white text-base editable-text" id="g3-title">আন্তর্জাতিক মানসম্পন্ন হিফজ ক্লাস</h4>
                     <p class="text-gray-400 text-xs mt-1 leading-relaxed editable-text" id="g3-desc">তাজবীদ সহকারে সহীহ-শুদ্ধভাবে পবিত্র কোরআন মুখস্থ করার জন্য নিবিড় তত্ত্বাবধানে ছাত্রদের ক্লাস চলছে।</p>
                 </div>
             </div>
+            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 group">
+                <div class="h-52 overflow-hidden bg-slate-950">
+                    <img src="gallery4.jpg" alt="মাদ্রাসার কার্যক্রম ৪" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-4" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Photo+4'">
+                </div>
+                <div class="p-4">
+                    <h4 class="font-bold text-white text-base editable-text" id="g4-title">ইসলামিক সাংস্কৃতিক অনুষ্ঠান</h4>
+                    <p class="text-gray-400 text-xs mt-1 leading-relaxed editable-text" id="g4-desc">শিক্ষার্থীদের মেধা ও মানসিক বিকাশের জন্য নিয়মিত হামদ-নাত ও ক্বিরাত প্রতিযোগিতার আয়োজন।</p>
+                </div>
+            </div>
+            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 group">
+                <div class="h-52 overflow-hidden bg-slate-950">
+                    <img src="gallery5.jpg" alt="মাদ্রাসার কার্যক্রম ৫" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-5" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Photo+5'">
+                </div>
+                <div class="p-4">
+                    <h4 class="font-bold text-white text-base editable-text" id="g5-title">পুরস্কার বিতরণী মুহূর্ত</h4>
+                    <p class="text-gray-400 text-xs mt-1 leading-relaxed editable-text" id="g5-desc">কৃতী শিক্ষার্থীদের মাঝে মাদ্রাসার পক্ষ থেকে সম্মাননা ও বিশেষ পুরস্কার প্রদানের এক আনন্দঘন মুহূর্ত।</p>
+                </div>
+            </div>
+            <div class="bg-slate-900 rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-sky-500 transition duration-300 group">
+                <div class="h-52 overflow-hidden bg-slate-950">
+                    <img src="gallery6.jpg" alt="মাদ্রাসার কার্যক্রম ৬" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 editable-img" id="gal-6" onerror="this.src='https://via.placeholder.com/600x400/1e293b/38bdf8?text=Photo+6'">
+                </div>
+                <div class="p-4">
+                    <h4 class="font-bold text-white text-base editable-text" id="g6-title">মাসিক অভিভাবক সমাবেশ</h4>
+                    <p class="text-gray-400 text-xs mt-1 leading-relaxed editable-text" id="g6-desc">শিক্ষার্থীদের পড়াশোনার মান আরও উন্নত করার লক্ষ্যে শিক্ষক ও অভিভাবকদের যৌথ মতবিনিময় সভা।</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- 🌟 ভর্তি ও ফি জোন -->
     <section id="admission-zone" class="py-16 bg-slate-900/40 border-t border-b border-gray-950" data-aos="fade-up">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="text-center mb-10">
@@ -250,7 +286,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 items-stretch">
-                <!-- বাম পাশ: কাস্টম ভর্তি ফি ও বেতন ক্যালকুলেটর -->
                 <div class="bg-slate-950 p-6 md:p-8 rounded-2xl border border-gray-800 flex flex-col justify-between text-left shadow-xl">
                     <div>
                         <h4 class="text-xl font-bold text-white mb-2"><i class="fas fa-calculator text-red-500 mr-2"></i><span class="editable-text" id="fees-calc-title">ভর্তি ফি ও বেতন ক্যালকুলেটর</span></h4>
@@ -269,16 +304,15 @@
                                 </select>
                             </div>
                             
-                            <!-- ফি প্রদর্শনের মেইন এরিয়া (ডিফল্ট হিডেন) -->
                             <div id="feeDisplayArea" class="hidden space-y-4 border-t border-gray-900 pt-4">
                                 <div class="grid grid-cols-2 gap-4 text-sm font-medium text-gray-300">
                                     <div>
                                         <span class="editable-text" id="lbl-adm-fee-text">ভর্তি ও সেশন ফি:</span>
-                                        <span id="admissionFee" class="text-white font-bold block text-lg mt-1 editable-text">০ ৳</span>
+                                        <span id="admissionFee" class="text-white font-bold block text-lg mt-1">০ ৳</span>
                                     </div>
                                     <div>
                                         <span class="editable-text" id="lbl-monthly-fee-text">মাসিক বেতন:</span>
-                                        <span id="monthlyFee" class="text-white font-bold block text-lg mt-1 editable-text">০ ৳</span>
+                                        <span id="monthlyFee" class="text-white font-bold block text-lg mt-1">০ ৳</span>
                                     </div>
                                 </div>
                                 <div class="border-t border-gray-800 pt-3">
@@ -292,7 +326,6 @@
                     </div>
                 </div>
 
-                <!-- ডান পাশ: অনলাইন ভর্তি নিবন্ধন কার্ড -->
                 <div class="bg-slate-950 p-6 md:p-8 rounded-2xl border border-gray-800 flex flex-col justify-between text-center shadow-xl">
                     <div class="my-auto space-y-4">
                         <i class="fas fa-file-alt text-5xl text-sky-400 mb-2"></i>
@@ -309,7 +342,6 @@
         </div>
     </section>
 
-    <!-- 🌟 ইসলামিক যাকাত ক্যালকুলেটর ও ফান্ড সেকশন -->
     <section id="zakat-calc" class="py-16 bg-gradient-to-b from-slate-900 to-slate-950 border-b border-gray-950" data-aos="fade-up">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="text-center mb-10">
@@ -320,7 +352,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 items-start">
-                <!-- বাম পাশ: লাইভ যাকাত ক্যালকুলেটর উজেট -->
                 <div class="bg-slate-950 p-6 rounded-2xl border border-gray-800 space-y-3.5 shadow-xl">
                     <h4 class="text-lg font-bold text-yellow-400 mb-2 border-b border-gray-900 pb-2"><i class="fas fa-calculator mr-1.5"></i>ডিজিটাল যাকাত ক্যালকুলেটর</h4>
                     
@@ -359,7 +390,6 @@
                     </div>
                 </div>
 
-                <!-- ডান পাশ: যাকাত ফান্ডের নোটিশ এবং পেমেন্ট ডিটেইলস -->
                 <div class="bg-slate-950 p-6 rounded-2xl border border-gray-800 shadow-xl flex flex-col justify-between h-full">
                     <div>
                         <h4 class="text-lg font-bold text-red-400 mb-3"><i class="fas fa-heart mr-1.5"></i>আপনার যাকাত এতিমখানায় দিন</h4>
@@ -382,7 +412,6 @@
         </div>
     </section>
 
-    <!-- 🌟 শিক্ষক মডাল (Popup) -->
     <div id="teacherModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
         <div class="bg-slate-950 border border-gray-800 w-full max-w-lg rounded-2xl shadow-2xl relative overflow-hidden">
             <button onclick="closeTeacherModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-xl cursor-pointer">
@@ -418,7 +447,6 @@
         </div>
     </div>
 
-    <!-- 🌟 কাস্টম এডমিন লগইন মডাল -->
     <div id="adminLoginModal" class="hidden fixed inset-0 z-[110] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
         <div class="bg-slate-950 border border-gray-800 w-full max-w-md rounded-2xl shadow-2xl relative overflow-hidden">
             <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-xl cursor-pointer">
@@ -451,7 +479,7 @@
     <section id="result" class="py-16 bg-slate-900/60 container mx-auto px-4 max-w-2xl rounded-2xl my-8 border border-gray-800" data-aos="fade-up">
         <div class="text-center mb-6">
             <i class="fas fa-graduation-cap text-5xl text-red-500 mb-3"></i>
-            <h3 class="text-2xl font-bold text-white editable-text" id="result-title">ফলাफल অনুসন্ধান কেন্দ্র</h3>
+            <h3 class="text-2xl font-bold text-white editable-text" id="result-title">ফলাফল অনুসন্ধান কেন্দ্র</h3>
             <p class="text-sm text-gray-400 mt-1 editable-text" id="result-desc">গুগল শিট ডাটাবেজ থেকে লাইভ ফলাফল চেক করুন</p>
         </div>
         <div class="space-y-4">
@@ -526,7 +554,6 @@
         </div>
     </footer>
 
-    <!-- 🌟 এডমিন প্যানেল গিয়ার উইজেট -->
     <div class="fixed bottom-4 right-4 z-[90]">
         <button onclick="openAdminModal()" class="bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition p-3 rounded-full shadow-2xl border border-gray-700 flex items-center justify-center cursor-pointer">
             <i class="fas fa-user-cog text-base"></i>
@@ -545,7 +572,6 @@
         </div>
     </div>
 
-    <!-- AOS Script Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         // AOS Initialize
@@ -578,7 +604,6 @@
             hifz: { admission: "২০০০ ৳", monthly: "২০০০ ৳", total: "৪০০০ ৳" }
         };
 
-        // ফি ক্যালকুলেটর লজিক (ড্রপডাউন সিলেক্ট করলে লোড হবে)
         function calculateFees() {
             const dept = document.getElementById('calcDept').value;
             const feeDisplayArea = document.getElementById('feeDisplayArea');
@@ -595,37 +620,28 @@
             if (classFeesData[dept]) {
                 admission.innerText = classFeesData[dept].admission;
                 monthly.innerText = classFeesData[dept].monthly;
-                
-                // সাথে সাথেই যোগফল নিখুঁতভাবে হিসাব করে দেখাবে
                 updateTotalFromEdits();
             }
         }
 
-        // 🌟 অ্যাডভান্সড ক্যালকুলেশন লজিক: সব ধরণের টেক্সট/ডট থেকে নিখুঁতভাবে শুধু সংখ্যা নিয়ে যোগ করবে
         function updateTotalFromEdits() {
             const dept = document.getElementById('calcDept').value;
-            
             const admElem = document.getElementById('admissionFee');
             const monElem = document.getElementById('monthlyFee');
             const totalElem = document.getElementById('totalFee');
             
             if (!admElem || !monElem || !totalElem) return;
 
-            // টেক্সট থেকে শুধু বাংলা এবং ইংরেজি সংখ্যাগুলো আলাদা করা
             const admText = admElem.innerText.replace(/[^0-9০-৯]/g, '');
             const monText = monElem.innerText.replace(/[^0-9০-৯]/g, '');
             
-            // বাংলা সংখ্যাকে ইংরেজিতে কনভার্ট করার ম্যাপিং ফাংশন
             const banglaToEnglish = num => num.replace(/[০-৯]/g, d => "০১২৩৪৫৬৭৮৯".indexOf(d));
-            // ইংরেজি সংখ্যাকে বাংলায় কনভার্ট করার ফাংশন
             const englishToBangla = num => String(num).replace(/[0-9]/g, d => "০১২৩৪৫৬৭৮৯"[d]);
             
-            // নাম্বারে রূপান্তর
             const admNum = parseInt(banglaToEnglish(admText)) || 0;
             const monNum = parseInt(banglaToEnglish(monText)) || 0;
             const totalNum = admNum + monNum;
 
-            // আউটপুট ফরম্যাটিং (কোডে যদি বাংলা ডিজিট থাকে তবে বাংলাতেই আউটপুট দিবে)
             let totalFormatted = "";
             if (/[০-৯]/.test(admElem.innerText) || /[০-৯]/.test(monElem.innerText)) {
                 totalFormatted = englishToBangla(totalNum) + " ৳";
@@ -633,10 +649,8 @@
                 totalFormatted = totalNum + " ৳";
             }
 
-            // ফাইনাল যোগফল স্ক্রিনে শো করা
             totalElem.innerText = totalFormatted;
 
-            // মেমরিতে ডাটা আপডেট রাখা (যদি এডমিন মোড থেকে কেউ এডিট করে)
             if (dept && classFeesData[dept]) {
                 classFeesData[dept].admission = admElem.innerText.trim();
                 classFeesData[dept].monthly = monElem.innerText.trim();
@@ -644,7 +658,6 @@
             }
         }
 
-        // যাকাত লাইভ ক্যালকুলেটর লজিক
         function calculateLiveZakat() {
             const gold = parseFloat(document.getElementById('zkGold').value) || 0;
             const silver = parseFloat(document.getElementById('zkSilver').value) || 0;
@@ -662,7 +675,7 @@
         const sheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQvnlUilrzWLNrH32wDq41Spyd_hJygMOtQzhEEMYXrPApH0BwvmY84LpZV_7Wscm746t2IjfkaGqMX/pub?output=csv";
         const ADMIN_PASS = "Niaaa1234@@";
         let isEditModeActive = false;
-        let currentActiveTeacherId = ""; 
+        let currentTeacherPrefix = ""; 
 
         function openAdminModal() {
             if (isEditModeActive) { alert("আপনি অলরেডি এডমিন হিসেবে লগইন করে আছেন।"); return; }
@@ -699,7 +712,6 @@
                 if (el.tagName === 'A' || el.tagName === 'BUTTON') el.addEventListener('click', preventNav);
                 if (el.id === 'edit-notice') el.setAttribute('scrollamount', '0');
                 
-                // টেক্সট এডিট করার সাথে সাথে রিয়েল-টাইমে মোট ফি আপডেট করার লিসেনার
                 el.addEventListener('input', updateTotalFromEdits);
                 el.addEventListener('blur', updateTotalFromEdits);
             });
@@ -708,6 +720,24 @@
                 img.classList.add('img-edit-focused');
                 img.addEventListener('click', handleImageEditClick);
             });
+
+            // এডমিন মোড অন হলে মডালের ভেতরের টেক্সটগুলোকে এডিটেবল করা
+            document.getElementById('modalTeacherName').contentEditable = "true";
+            document.getElementById('modalTeacherDesignation').contentEditable = "true";
+            document.getElementById('modalTeacherEdu').contentEditable = "true";
+            document.getElementById('modalTeacherExp').contentEditable = "true";
+            document.getElementById('modalTeacherPhone').contentEditable = "true";
+            document.getElementById('modalTeacherEmail').contentEditable = "true";
+
+            document.getElementById('modalTeacherName').classList.add('edit-focused');
+            document.getElementById('modalTeacherDesignation').classList.add('edit-focused');
+            document.getElementById('modalTeacherEdu').classList.add('edit-focused');
+            document.getElementById('modalTeacherExp').classList.add('edit-focused');
+            document.getElementById('modalTeacherPhone').classList.add('edit-focused');
+            document.getElementById('modalTeacherEmail').classList.add('edit-focused');
+
+            // লাইভ এডিট ট্র্যাকিং লিসেনার (মডালের ভেতর পরিবর্তন করলে তা মূল কার্ডেও ব্যাকআপ হবে)
+            setupModalLiveSync();
         }
 
         function preventNav(e) { if (isEditModeActive) e.preventDefault(); }
@@ -716,22 +746,25 @@
             if (!isEditModeActive) return;
             e.stopPropagation();
             const currentImg = e.currentTarget;
-            const newUrl = prompt("নতুন ইমেজের URL দিন:", currentImg.src);
+            const newUrl = prompt("নতুন ইমেজের নাম বা URL দিন (যেমন: gallery1.jpg):", currentImg.getAttribute('src'));
             if (newUrl && newUrl.trim() !== "") {
                 currentImg.src = newUrl.trim();
             }
         }
 
-        function handleTeacherClick(event, name, designation, img, phone, email, education, experience) {
-            if (isEditModeActive) return; 
-            if(event && event.currentTarget) {
-                const h4 = event.currentTarget.querySelector('h4');
-                if(h4 && h4.id) currentActiveTeacherId = h4.id.split('-')[0];
-            }
-            showTeacherDetails(name, designation, img, phone, email, education, experience);
-        }
+        // শিক্ষকদের কার্ডে ক্লিক হ্যান্ডলার লজিক
+        function handleTeacherClick(event, prefix) {
+            event.stopPropagation();
+            currentTeacherPrefix = prefix;
 
-        function showTeacherDetails(name, designation, img, phone, email, education, experience) {
+            const name = document.getElementById(`${prefix}-name`).innerText;
+            const designation = document.getElementById(`${prefix}-desg`).innerText;
+            const img = document.getElementById(`timg-${prefix.replace('t','')}`).src;
+            const phone = document.getElementById(`${prefix}-phone`).innerText;
+            const email = document.getElementById(`${prefix}-email`).innerText;
+            const education = document.getElementById(`${prefix}-edu`).innerText;
+            const experience = document.getElementById(`${prefix}-exp`).innerText;
+
             document.getElementById('modalTeacherName').innerText = name;
             document.getElementById('modalTeacherDesignation').innerText = designation;
             document.getElementById('modalTeacherImg').src = img;
@@ -739,16 +772,46 @@
             document.getElementById('modalTeacherEmail').innerText = email;
             document.getElementById('modalTeacherEdu').innerText = education;
             document.getElementById('modalTeacherExp').innerText = experience;
+            
             document.getElementById('teacherModal').classList.remove('hidden');
+        }
+
+        // মডালের ভেতর এডিট করলে তা সাথে সাথে পেজের ব্যাকগ্রাউন্ড ডাটাতে সেভ করার লজিক
+        function setupModalLiveSync() {
+            const syncData = (modalId, cardId) => {
+                document.getElementById(modalId).addEventListener('input', (e) => {
+                    if(currentTeacherPrefix) {
+                        const targetElem = document.getElementById(`${currentTeacherPrefix}-${cardId}`);
+                        if(targetElem) targetElem.innerText = e.target.innerText.trim();
+                    }
+                });
+            };
+            syncData('modalTeacherName', 'name');
+            syncData('modalTeacherDesignation', 'desg');
+            syncData('modalTeacherPhone', 'phone');
+            syncData('modalTeacherEmail', 'email');
+            syncData('modalTeacherEdu', 'edu');
+            syncData('modalTeacherExp', 'exp');
         }
 
         function saveWebsiteUpdates() {
             const dataToSave = { texts: {}, images: {}, baseFees: classFeesData };
             
+            // সব এডিটেবল টেক্সট সেভ করা
             document.querySelectorAll('.editable-text').forEach(el => {
                 if (el.id) dataToSave.texts[el.id] = el.innerText.trim();
             });
+
+            // শিক্ষকদের হিডেন ডাটা সহ সেভ করা
+            const prefixes = ['t1', 't2', 't3', 't4'];
+            prefixes.forEach(p => {
+                ['name', 'desg', 'phone', 'email', 'edu', 'exp'].forEach(field => {
+                    const el = document.getElementById(`${p}-${field}`);
+                    if(el) dataToSave.texts[el.id] = el.innerText.trim();
+                });
+            });
             
+            // ছবি সেভ করা
             document.querySelectorAll('.editable-img').forEach(img => {
                 if (img.id) {
                     let path = img.src;
@@ -788,7 +851,7 @@
         });
 
         function exitEditMode() { isEditModeActive = false; window.location.reload(); }
-        function closeTeacherModal() { document.getElementById('teacherModal').classList.add('hidden'); }
+        function closeTeacherModal() { document.getElementById('teacherModal').classList.add('hidden'); currentTeacherPrefix = ""; }
 
         async function searchOnlineResult() {
             const rollInput = document.getElementById('searchRoll').value.trim();
