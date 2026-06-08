@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darul Uloom Al-Helal Madrasah</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <button id="backToTop" class="hidden fixed bottom-20 right-4 z-[90] bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-2xl transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header class="shadow-md sticky top-0 z-50 bg-gray-950/90 backdrop-blur border-b border-gray-800">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full" id="site-fresh-logo" onerror="this.src='https://via.placeholder.com/50'">
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide text-white" id="site-title-bn"></h1>
+                    <p class="text-xs text-gray-400 font-medium" id="site-title-en"></p>
+                </div>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="nav-menu" class="hidden md:flex space-x-5 font-semibold text-sm"></nav>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-950 border-b border-gray-800 px-4 pb-4 space-y-2"></div>
+    </header>
+
+    <section class="relative bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white py-24 text-center border-b border-gray-900">
+        <div class="container mx-auto px-4 relative z-10" data-aos="zoom-in">
+            <span class="bg-red-600 text-white text-xs uppercase px-3 py-1 rounded-full font-bold tracking-widest animate-pulse" id="class-time-badge"></span>
+            <h2 id="edit-main-heading" class="text-4xl md:text-5xl font-extrabold mt-4 mb-4 transition-all duration-200"></h2>
+            <p id="edit-sub-heading" class="max-w-2xl mx-auto text-gray-400 text-sm md:text-base transition-all duration-200"></p>
+            <div class="mt-8">
+                <a target="_blank" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg hover:bg-red-700 transition inline-block" id="hero-admission-btn"></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-red-950/40 py-2.5 border-b border-red-900/50">
+        <div class="container mx-auto px-4 flex items-center">
+            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded mr-3" id="notice-label"></span>
+            <marquee id="edit-notice" class="text-sm font-semibold text-red-200 transition-all duration-200" scrollamount="4"></marquee>
+        </div>
+    </div>
+
+    <section id="prayer-times" class="py-12 bg-slate-900/60 border-b border-gray-950" data-aos="fade-up">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-white mb-6"><i class="fas fa-clock text-sky-400 mr-2"></i>আজকের নামাজের সময়সূচী (সিলেট)</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 font-semibold text-sm">
+                <div class="bg-slate-950 p-4 rounded-xl border border-gray-800 shadow"><span class="text-gray-400 block mb-1">ফজর</span><span class="text-sky-400 text-lg">০৪:১০ AM</span></div>
+                <div class="bg-slate-950 p-4 rounded-xl border border-gray-800 shadow"><span class="text-gray-400 block mb-1">যোহর</span><span class="text-sky-400 text-lg">১২:০৫ PM</span></div>
+                <div class="bg-slate-950 p-4 rounded-xl border border-gray-800 shadow"><span class="text-gray-400 block mb-1">আসর</span><span class="text-sky-400 text-lg">০৪:৩০ PM</span></div>
+                <div class="bg-slate-950 p-4 rounded-xl border border-gray-800 shadow"><span class="text-gray-400 block mb-1">মাগরিব</span><span class="text-red-400 text-lg">০৬:৪৫ PM</span></div>
+                <div class="bg-slate-950 p-4 rounded-xl border border-gray-800 shadow"><span class="text-gray-400 block mb-1">এশা</span><span class="text-sky-400 text-lg">০৮:১৫ PM</span></div>
+                <div class="bg-slate-950 p-4 rounded-xl border border-gray-800 shadow"><span class="text-green-400 block mb-1">জুম্মা</span><span class="text-green-400 text-lg">০১:১৫ PM</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 container mx-auto px-4" data-aos="fade-up">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-white" id="about-section-title"></h3>
+            <div class="w-24 h-1 bg-red-600 mx-auto mt-2"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <p id="edit-about-text" class="text-lg leading-relaxed text-gray-300 transition-all duration-200"></p>
+                <h4 class="font-bold text-xl text-sky-400" id="about-sub-title"></h4>
+                <ul id="about-dept-list" class="list-disc pl-5 space-y-2 font-medium text-gray-300"></ul>
+            </div>
+            <div class="bg-slate-900/80 p-6 rounded-xl border-l-4 border-blue-600 shadow-lg">
+                <h4 class="font-bold text-xl text-red-400 mb-3" id="founder-title"></h4>
+                <p id="edit-founder-speech" class="italic text-sm text-gray-300 transition-all duration-200"></p>
+                <p class="mt-4 font-bold text-sky-400" id="founder-name"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers" class="py-16 bg-slate-900/40 border-t border-b border-gray-900" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-white" id="teachers-section-title"></h3>
+                <p class="text-xs text-gray-400 mt-1" id="teachers-section-desc"></p>
+                <div class="w-24 h-1 bg-red-600 mx-auto mt-2"></div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="teachers-grid"></div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 container mx-auto px-4" data-aos="fade-up">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-white" id="gallery-title"></h3>
+            <p class="text-xs text-gray-400 mt-1" id="gallery-desc"></p>
+            <div class="w-24 h-1 bg-red-600 mx-auto mt-2"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid"></div>
+    </section>
+
+    <section id="admission-zone" class="py-16 bg-slate-900/40 border-t border-b border-gray-950" data-aos="fade-up">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-bold text-white" id="admission-zone-title"></h3>
+                <p class="text-sm text-gray-400 mt-1" id="admission-zone-desc"></p>
+                <div class="w-24 h-1 bg-red-600 mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                <div class="bg-slate-950 p-6 md:p-8 rounded-2xl border border-gray-800 flex flex-col justify-between text-left shadow-xl">
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2"><i class="fas fa-calculator text-red-500 mr-2"></i><span id="fees-calc-title"></span></h4>
+                        <p class="text-xs text-gray-400 mb-6" id="fees-calc-desc"></p>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-1" id="lbl-select-class"></label>
+                                <select id="calcDept" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-red-500" onchange="calculateFees()">
+                                    </select>
+                            </div>
+                            
+                            <div id="feeDisplayArea" class="hidden space-y-4 border-t border-gray-900 pt-4">
+                                <div class="space-y-3 font-medium text-gray-300">
+                                    <div class="flex justify-between items-center text-sm border-b border-gray-900 pb-2">
+                                        <span id="lbl-adm-fee-text"></span>
+                                        <span id="admissionFee" class="text-white font-bold text-base">০ ৳</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-sm border-b border-gray-900 pb-2">
+                                        <span id="lbl-monthly-fee-text"></span>
+                                        <span id="monthlyFee" class="text-white font-bold text-base">০ ৳</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-sm pb-1">
+                                        <span id="lbl-boarding-fee-text"></span>
+                                        <span id="boardingFee" class="text-white font-bold text-base">০ ৳</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 p-6 md:p-8 rounded-2xl border border-gray-800 flex flex-col justify-between text-center shadow-xl">
+                    <div class="my-auto space-y-4">
+                        <i class="fas fa-file-alt text-5xl text-sky-400 mb-2"></i>
+                        <h4 class="text-2xl font-bold text-white" id="reg-title"></h4>
+                        <p class="text-sm text-gray-400 leading-relaxed max-w-sm mx-auto" id="reg-desc"></p>
+                    </div>
+                    <div class="mt-6">
+                        <a target="_blank" class="w-full block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-lg transition shadow-md text-lg" id="reg-form-btn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="zakat-calc" class="py-16 bg-gradient-to-b from-slate-900 to-slate-950 border-b border-gray-950" data-aos="fade-up">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10">
+                <i class="fas fa-hand-holding-usd text-5xl text-yellow-500 mb-3"></i>
+                <h3 class="text-3xl font-bold text-white" id="zakat-title"></h3>
+                <p class="text-sm text-gray-400 mt-1" id="zakat-desc"></p>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="bg-slate-950 p-6 rounded-2xl border border-gray-800 space-y-3.5 shadow-xl">
+                    <h4 class="text-lg font-bold text-yellow-400 mb-2 border-b border-gray-900 pb-2"><i class="fas fa-calculator mr-1.5"></i>ডিজিটাল যাকাত ক্যালকুলেটর</h4>
+                    
+                    <div class="grid grid-cols-2 gap-3 text-xs font-semibold">
+                        <div><label class="block text-gray-400 mb-1">স্বর্ণের মূল্য (টাকায়)</label><input type="number" id="zkGold" value="" class="w-full bg-slate-900 border border-gray-700 rounded-lg p-2 text-white focus:outline-none focus:border-yellow-500" oninput="calculateLiveZakat()"></div>
+                        <div><label class="block text-gray-400 mb-1">রূপার মূল্য (টাকায়)</label><input type="number" id="zkSilver" value="" class="w-full bg-slate-900 border border-gray-700 rounded-lg p-2 text-white focus:outline-none focus:border-yellow-500" oninput="calculateLiveZakat()"></div>
+                    </div>
+                    <div class="text-xs font-semibold"><label class="block text-gray-400 mb-1">নগদ টাকা (ব্যাংক ও হাতে জমা)</label><input type="number" id="zkCash" value="" class="w-full bg-slate-900 border border-gray-700 rounded-lg p-2 text-white focus:outline-none focus:border-yellow-500" oninput="calculateLiveZakat()"></div>
+                    <div class="text-xs font-semibold"><label class="block text-gray-400 mb-1">ব্যবসায়িক পণ্যের মূল্যমান</label><input type="number" id="zkBusiness" value="" class="w-full bg-slate-900 border border-gray-700 rounded-lg p-2 text-white focus:outline-none focus:border-yellow-500" oninput="calculateLiveZakat()"></div>
+                    <div class="text-xs font-semibold"><label class="block text-red-400 mb-1">বাদ যাবে: মোট ঋণ/দেনা</label><input type="number" id="zkDebt" value="" class="w-full bg-slate-900 border border-gray-700 rounded-lg p-2 text-white focus:outline-none focus:border-yellow-500" oninput="calculateLiveZakat()"></div>
+
+                    <div class="border-t border-gray-800 pt-3 mt-4 text-sm">
+                        <div class="flex justify-between font-medium text-gray-400"><span>যাকাতযোগ্য মোট সম্পদ:</span><span id="zkTotalAsset" class="text-white font-bold">০ ৳</span></div>
+                        <div class="flex justify-between font-bold text-yellow-400 text-base mt-1.5"><span>আপনার প্রদেয় যাকাত (২.৫%):</span><span id="zkFinalZakat" class="text-green-400 font-extrabold text-lg">০ ৳</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 p-6 rounded-2xl border border-gray-800 shadow-xl flex flex-col justify-between h-full">
+                    <div>
+                        <h4 class="text-lg font-bold text-red-400 mb-3"><i class="fas fa-heart mr-1.5"></i><span id="zakat-box-title"></span></h4>
+                        <p id="zakat-box-speech" class="text-sm text-gray-300 leading-relaxed"></p>
+                    </div>
+                    
+                    <div class="mt-6 bg-slate-900 p-4 rounded-xl border border-gray-800 space-y-2.5 text-xs font-bold">
+                        <div class="flex items-center justify-between"><span class="text-gray-400"><i class="fas fa-mobile-alt mr-1 text-pink-500"></i> বিকাশ (পার্সোনাল):</span><span class="text-white text-sm" id="zk-bkash"></span></div>
+                        <div class="flex items-center justify-between border-t border-gray-800/60 pt-2"><span class="text-gray-400"><i class="fas fa-wallet mr-1 text-purple-500"></i> রকেট / নগদ:</span><span class="text-white text-sm" id="zk-nagad"></span></div>
+                        <p class="text-[10px] text-yellow-500/80 text-center font-medium pt-1"><i class="fas fa-info-circle mr-1"></i> টাকা পাঠানোর পর অনুগ্রহ করে মুহতামিম সাহেবকে কল করে নিশ্চিত করুন।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="teacherModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+        <div class="bg-slate-950 border border-gray-800 w-full max-w-lg rounded-2xl shadow-2xl relative overflow-hidden">
+            <button onclick="closeTeacherModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition text-xl cursor-pointer"><i class="fas fa-times"></i></button>
+            <div class="p-6 text-center border-b border-gray-900 bg-gradient-to-b from-blue-950/20 to-transparent">
+                <div class="w-24 h-24 mx-auto mb-3 relative"><img id="modalTeacherImg" src="" alt="" class="w-full h-full object-cover rounded-full border-2 border-sky-500 shadow-md"></div>
+                <h3 id="modalTeacherName" class="text-2xl font-bold text-white"></h3>
+                <p id="modalTeacherDesignation" class="text-red-400 font-semibold text-sm"></p>
+            </div>
+            <div class="p-6 space-y-4 text-sm text-gray-300">
+                <div><h5 class="text-sky-400 font-bold mb-1"><i class="fas fa-graduation-cap mr-1.5"></i> শিক্ষাগত যোগ্যতা:</h5><p id="modalTeacherEdu" class="leading-relaxed text-gray-400"></p></div>
+                <div><h5 class="text-sky-400 font-bold mb-1"><i class="fas fa-briefcase mr-1.5"></i> অভিজ্ঞতা ও পরিচিতি:</h5><p id="modalTeacherExp" class="leading-relaxed text-gray-400"></p></div>
+                <div class="pt-3 border-t border-gray-900 grid grid-cols-2 gap-4 text-xs">
+                    <div><span class="text-gray-500 block">মোবাইল নাম্বার:</span><span id="modalTeacherPhone" class="font-bold text-white"></span></div>
+                    <div><span class="text-gray-500 block">ইমেইল ঠিকানা:</span><span id="modalTeacherEmail" class="font-bold text-white break-all"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="result" class="py-16 bg-slate-900/60 container mx-auto px-4 max-w-2xl rounded-2xl my-8 border border-gray-800" data-aos="fade-up">
+        <div class="text-center mb-6"><i class="fas fa-graduation-cap text-5xl text-red-500 mb-3"></i><h3 class="text-2xl font-bold text-white" id="result-title"></h3><p class="text-sm text-gray-400 mt-1" id="result-desc"></p></div>
+        <div class="space-y-4">
+            <div><label class="block text-sm font-medium text-gray-300 mb-1" id="lbl-roll">রোল নাম্বাল (Roll No)</label><input type="text" id="searchRoll" placeholder="উদা: 000" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white placeholder-gray-400/50 focus:outline-none focus:border-red-500 transition"></div>
+            <div><label class="block text-sm font-medium text-gray-300 mb-1" id="lbl-exam">পরীক্ষার নাম (Exam Type)</label><select id="searchExam" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-gray-400/50 focus:outline-none focus:border-red-500 transition" onchange="this.classList.remove('text-gray-400/50'); this.classList.add('text-white')"><option value="" disabled selected hidden>নির্বাচন করুন</option><option value="প্রথম সাময়িক পরিক্ষা" class="text-white bg-slate-900">প্রথম সাময়িক পরিক্ষা</option><option value="দ্বিতীয় সাময়িক পরিক্ষা" class="text-white bg-slate-900">দ্বিতীয় সাময়িক পরিক্ষা</option><option value="বার্ষিক পরীক্ষা" class="text-white bg-slate-900">বার্ষিক পরীক্ষা</option></select></div>
+            <div><label class="block text-sm font-medium text-gray-300 mb-1" id="lbl-year">সাল (Year)</label><select id="searchYear" class="w-full bg-slate-900 border border-gray-700 rounded-lg px-4 py-2.5 text-gray-400/50 focus:outline-none focus:border-red-500 transition" onchange="this.classList.remove('text-gray-400/50'); this.classList.add('text-white')"><option value="" disabled selected hidden>নির্বাচন করুন</option><option value="2024" class="text-white bg-slate-900">2024</option><option value="2025" class="text-white bg-slate-900">2025</option><option value="2026" class="text-white bg-slate-900">2026</option><option value="2027" class="text-white bg-slate-900">2027</option></select></div>
+            <button onclick="searchOnlineResult()" id="searchBtn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition shadow-md flex items-center justify-center cursor-pointer"><i class="fas fa-search mr-2"></i> ফলাফল দেখুন (Search Result)</button>
+        </div>
+
+        <div id="resultCard" class="hidden mt-8 bg-slate-900 p-5 rounded-xl border border-gray-700">
+            <div class="border-b border-gray-700 pb-3 mb-4"><h4 class="text-lg font-bold text-sky-400" id="resName">নাম: </h4><p class="text-sm text-gray-300 mt-1" id="resRoll">রোল: </p><p class="text-sm text-gray-300" id="resClass">ক্লাস: </p></div>
+            <div class="overflow-x-auto"><table class="w-full text-left text-sm text-gray-300"><thead class="bg-gray-800 text-white text-xs uppercase"><tr><th class="px-4 py-2 rounded-l">বইয়ের নাম (Subject)</th><th class="px-4 py-2 rounded-r text-right">প্রাপ্ত নাম্বার (Marks)</th></tr></thead><tbody id="marksTableBody" class="divide-y divide-gray-800"></tbody></table></div></div>
+    </section>
+
+    <footer id="contact" class="bg-gray-950 text-white pt-16 pb-6 border-t border-gray-900" data-aos="fade-up">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 pb-8 border-b border-gray-900">
+            <div><h4 class="text-xl font-bold mb-4 text-red-400" id="f-addr-title"></h4><a href="#" class="group block text-gray-400 text-sm leading-relaxed hover:text-white transition"><p id="f-addr-text"></p></a></div>
+            <div><h4 class="text-xl font-bold mb-4 text-red-400" id="f-phone-title"></h4><p class="text-gray-400 text-sm" id="f-phone-1"></p><p class="text-gray-400 text-sm mt-2" id="f-phone-2"></p></div>
+            <div><h4 class="text-xl font-bold mb-4 text-red-400" id="f-map-title"></h4><iframe src="https://maps.google.com/maps?q=Darul%20Uloom%20Al%20Helal%20Madrasha%20Sylhet&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg opacity-80 hover:opacity-100 transition"></iframe></div>
+        </div>
+        <div class="text-center pt-6 text-xs text-gray-500" id="f-copyright"></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
